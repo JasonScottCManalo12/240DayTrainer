@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>240DayTrainer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #3a7bd5, #2e279d);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .course-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+        .course-header {
+            padding: 1.5rem;
+            color: white;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        .business { background-color: #2c3e50; }
+        .communication { background-color: #e67e22; }
+        .computer { background-color: #3498db; }
+        .education { background-color: #9b59b6; }
+        .engineering { background-color: #2ecc71; }
+        .environment { background-color: #1abc9c; }
+        .food { background-color: #e74c3c; }
+        .healthcare { background-color: #f1c40f; }
+        .law { background-color: #34495e; }
+        .religion { background-color: #7f8c8d; }
+
+        .course-content {
+            padding: 1.5rem;
+        }
+        .levels {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .level {
+            margin-bottom: 1.2rem;
+        }
+        .level-link {
+            display: block;
+            padding: 0.8rem 1rem;
+            text-decoration: none;
+            color: #333;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+            border-left: 4px solid transparent;
+        }
+        .level-basic {
+            border-left-color: #3498db;
+            background-color: #ebf5fb;
+        }
+        .level-basic:hover {
+            background-color: #d6eaf8;
+        }
+        .level-intermediate {
+            border-left-color: #f39c12;
+            background-color: #fef5e7;
+        }
+        .level-intermediate:hover {
+            background-color: #fdebd0;
+        }
+        .level-advanced {
+            border-left-color: #e74c3c;
+            background-color: #fdedec;
+        }
+        .level-advanced:hover {
+            background-color: #fadbd8;
+        }
+        .level-details {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: #666;
+            padding-left: 1rem;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            .courses {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>240DayTrainer</h1>
+        <p class="tagline">Transform your knowledge in 240 days with our structured learning paths</p>
+    </header>
+
+    <div class="container">
+        <div class="courses">
+            <!-- Business Course -->
+            <div class="course-card">
+                <div class="course-header business">(1) Business</div>
+                <div class="course-content">
+                    <ul class="levels">
+                        <li class="level">
+                            <a href="#" class="level-link level-basic">Day 1 to 40: Basics</a>
+                            <div class="level-details">
+                                <p>- 40 days</p>
+                                <p>- 1 topic for 3 hours a day</p>
+                                <p>- 3 hours for each topic</p>
+                                <p>- 3 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-intermediate">Day 41 to 120: Intermediate</a>
+                            <div class="level-details">
+                                <p>- 80 days</p>
+                                <p>- 1 topic for 2 hours</p>
+                                <p>- 2 hours each topic</p>
+                                <p>- 6 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-advanced">Day 121 to 240: Advanced</a>
+                            <div class="level-details">
+                                <p>- 120 days</p>
+                                <p>- 1 topic for 1 hour</p>
+                                <p>- 1 hour each topic</p>
+                                <p>- 12 hours a day</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Communication Course -->
+            <div class="course-card">
+                <div class="course-header communication">(2) Communication</div>
+                <div class="course-content">
+                    <ul class="levels">
+                        <li class="level">
+                            <a href="#" class="level-link level-basic">Day 1 to 40: Basics</a>
+                            <div class="level-details">
+                                <p>- 40 days</p>
+                                <p>- 1 topic for 3 hours a day</p>
+                                <p>- 3 hours for each topic</p>
+                                <p>- 3 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-intermediate">Day 41 to 120: Intermediate</a>
+                            <div class="level-details">
+                                <p>- 80 days</p>
+                                <p>- 1 topic for 2 hours</p>
+                                <p>- 2 hours each topic</p>
+                                <p>- 6 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-advanced">Day 121 to 240: Advanced</a>
+                            <div class="level-details">
+                                <p>- 120 days</p>
+                                <p>- 1 topic for 1 hour</p>
+                                <p>- 1 hour each topic</p>
+                                <p>- 12 hours a day</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Computer Course -->
+            <div class="course-card">
+                <div class="course-header computer">(3) Computer</div>
+                <div class="course-content">
+                    <ul class="levels">
+                        <li class="level">
+                            <a href="#" class="level-link level-basic">Day 1 to 40: Basics</a>
+                            <div class="level-details">
+                                <p>- 40 days</p>
+                                <p>- 1 topic for 3 hours a day</p>
+                                <p>- 3 hours for each topic</p>
+                                <p>- 3 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-intermediate">Day 41 to 120: Intermediate</a>
+                            <div class="level-details">
+                                <p>- 80 days</p>
+                                <p>- 1 topic for 2 hours</p>
+                                <p>- 2 hours each topic</p>
+                                <p>- 6 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-advanced">Day 121 to 240: Advanced</a>
+                            <div class="level-details">
+                                <p>- 120 days</p>
+                                <p>- 1 topic for 1 hour</p>
+                                <p>- 1 hour each topic</p>
+                                <p>- 12 hours a day</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education Course -->
+            <div class="course-card">
+                <div class="course-header education">(4) Education</div>
+                <div class="course-content">
+                    <ul class="levels">
+                        <li class="level">
+                            <a href="#" class="level-link level-basic">Day 1 to 40: Basics</a>
+                            <div class="level-details">
+                                <p>- 40 days</p>
+                                <p>- 1 topic for 3 hours a day</p>
+                                <p>- 3 hours for each topic</p>
+                                <p>- 3 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-intermediate">Day 41 to 120: Intermediate</a>
+                            <div class="level-details">
+                                <p>- 80 days</p>
+                                <p>- 1 topic for 2 hours</p>
+                                <p>- 2 hours each topic</p>
+                                <p>- 6 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-advanced">Day 121 to 240: Advanced</a>
+                            <div class="level-details">
+                                <p>- 120 days</p>
+                                <p>- 1 topic for 1 hour</p>
+                                <p>- 1 hour each topic</p>
+                                <p>- 12 hours a day</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Engineering Course -->
+            <div class="course-card">
+                <div class="course-header engineering">(5) Engineering</div>
+                <div class="course-content">
+                    <ul class="levels">
+                        <li class="level">
+                            <a href="#" class="level-link level-basic">Day 1 to 40: Basics</a>
+                            <div class="level-details">
+                                <p>- 40 days</p>
+                                <p>- 1 topic for 3 hours a day</p>
+                                <p>- 3 hours for each topic</p>
+                                <p>- 3 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-intermediate">Day 41 to 120: Intermediate</a>
+                            <div class="level-details">
+                                <p>- 80 days</p>
+                                <p>- 1 topic for 2 hours</p>
+                                <p>- 2 hours each topic</p>
+                                <p>- 6 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-advanced">Day 121 to 240: Advanced</a>
+                            <div class="level-details">
+                                <p>- 120 days</p>
+                                <p>- 1 topic for 1 hour</p>
+                                <p>- 1 hour each topic</p>
+                                <p>- 12 hours a day</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Environment Course -->
+            <div class="course-card">
+                <div class="course-header environment">(6) Environment</div>
+                <div class="course-content">
+                    <ul class="levels">
+                        <li class="level">
+                            <a href="#" class="level-link level-basic">Day 1 to 40: Basics</a>
+                            <div class="level-details">
+                                <p>- 40 days</p>
+                                <p>- 1 topic for 3 hours a day</p>
+                                <p>- 3 hours for each topic</p>
+                                <p>- 3 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-intermediate">Day 41 to 120: Intermediate</a>
+                            <div class="level-details">
+                                <p>- 80 days</p>
+                                <p>- 1 topic for 2 hours</p>
+                                <p>- 2 hours each topic</p>
+                                <p>- 6 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-advanced">Day 121 to 240: Advanced</a>
+                            <div class="level-details">
+                                <p>- 120 days</p>
+                                <p>- 1 topic for 1 hour</p>
+                                <p>- 1 hour each topic</p>
+                                <p>- 12 hours a day</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Food Course -->
+            <div class="course-card">
+                <div class="course-header food">(7) Food</div>
+                <div class="course-content">
+                    <ul class="levels">
+                        <li class="level">
+                            <a href="#" class="level-link level-basic">Day 1 to 40: Basics</a>
+                            <div class="level-details">
+                                <p>- 40 days</p>
+                                <p>- 1 topic for 3 hours a day</p>
+                                <p>- 3 hours for each topic</p>
+                                <p>- 3 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-intermediate">Day 41 to 120: Intermediate</a>
+                            <div class="level-details">
+                                <p>- 80 days</p>
+                                <p>- 1 topic for 2 hours</p>
+                                <p>- 2 hours each topic</p>
+                                <p>- 6 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-advanced">Day 121 to 240: Advanced</a>
+                            <div class="level-details">
+                                <p>- 120 days</p>
+                                <p>- 1 topic for 1 hour</p>
+                                <p>- 1 hour each topic</p>
+                                <p>- 12 hours a day</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Healthcare Course -->
+            <div class="course-card">
+                <div class="course-header healthcare">(8) Healthcare</div>
+                <div class="course-content">
+                    <ul class="levels">
+                        <li class="level">
+                            <a href="#" class="level-link level-basic">Day 1 to 40: Basics</a>
+                            <div class="level-details">
+                                <p>- 40 days</p>
+                                <p>- 1 topic for 3 hours a day</p>
+                                <p>- 3 hours for each topic</p>
+                                <p>- 3 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-intermediate">Day 41 to 120: Intermediate</a>
+                            <div class="level-details">
+                                <p>- 80 days</p>
+                                <p>- 1 topic for 2 hours</p>
+                                <p>- 2 hours each topic</p>
+                                <p>- 6 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-advanced">Day 121 to 240: Advanced</a>
+                            <div class="level-details">
+                                <p>- 120 days</p>
+                                <p>- 1 topic for 1 hour</p>
+                                <p>- 1 hour each topic</p>
+                                <p>- 12 hours a day</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Law Course -->
+            <div class="course-card">
+                <div class="course-header law">(9) Law</div>
+                <div class="course-content">
+                    <ul class="levels">
+                        <li class="level">
+                            <a href="#" class="level-link level-basic">Day 1 to 40: Basics</a>
+                            <div class="level-details">
+                                <p>- 40 days</p>
+                                <p>- 1 topic for 3 hours a day</p>
+                                <p>- 3 hours for each topic</p>
+                                <p>- 3 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-intermediate">Day 41 to 120: Intermediate</a>
+                            <div class="level-details">
+                                <p>- 80 days</p>
+                                <p>- 1 topic for 2 hours</p>
+                                <p>- 2 hours each topic</p>
+                                <p>- 6 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-advanced">Day 121 to 240: Advanced</a>
+                            <div class="level-details">
+                                <p>- 120 days</p>
+                                <p>- 1 topic for 1 hour</p>
+                                <p>- 1 hour each topic</p>
+                                <p>- 12 hours a day</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Religion Course -->
+            <div class="course-card">
+                <div class="course-header religion">(10) Religion</div>
+                <div class="course-content">
+                    <ul class="levels">
+                        <li class="level">
+                            <a href="#" class="level-link level-basic">Day 1 to 40: Basics</a>
+                            <div class="level-details">
+                                <p>- 40 days</p>
+                                <p>- 1 topic for 3 hours a day</p>
+                                <p>- 3 hours for each topic</p>
+                                <p>- 3 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-intermediate">Day 41 to 120: Intermediate</a>
+                            <div class="level-details">
+                                <p>- 80 days</p>
+                                <p>- 1 topic for 2 hours</p>
+                                <p>- 2 hours each topic</p>
+                                <p>- 6 hours a day</p>
+                            </div>
+                        </li>
+                        <li class="level">
+                            <a href="#" class="level-link level-advanced">Day 121 to 240: Advanced</a>
+                            <div class="level-details">
+                                <p>- 120 days</p>
+                                <p>- 1 topic for 1 hour</p>
+                                <p>- 1 hour each topic</p>
+                                <p>- 12 hours a day</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 240DayTrainer. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<div>
+        <h2>DepEd K-12 References</h2>
+        
+        <div>
+            <ol>
+                <li><strong>Reference:</strong><a href="https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/"> https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/</a></li>
+                <li><strong>Reference:</strong><a href="https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/kindergarten/"> https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/kindergarten/</a></li>
+                <li><strong>Reference:</strong><a href="https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/grade-1-to-10-subjects/"> https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/grade-1-to-10-subjects/</a></li>
+                <li><strong>Reference:</strong><a href="https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/technology-and-livelihood-education-tle-and-technical-vocational-livelihood-tvl-track/"> https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/technology-and-livelihood-education-tle-and-technical-vocational-livelihood-tvl-track/</a></li>
+                <li><strong>Reference:</strong><a href="https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/senior-high-school-core-curriculum-subjects/"> https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/senior-high-school-core-curriculum-subjects/</a></li>
+            </ol>
+        </div>
+    </div>
